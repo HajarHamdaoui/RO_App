@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Résolution des programmes linéaires</title>
+  <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+  <!-- Canvas -->
+<canvas class="orb-canvas"></canvas>
+<!-- Overlay -->
+<div class="overlay">
+  <!-- Overlay inner wrapper -->
+  <div class="overlay__inner">
+    <!-- Title -->
+    <h1 class="overlay__title">
+      Bienvenue dans notre logiciel qui permet d'effectuer 
+      <span class="text-gradient">la résolution visuelle</span> des programmes linéaires
+    </h1>
+    <!-- Description -->
+    <p class="overlay__description">
+      Veuillez saisir votre probléme et cliquer sur le bouton <strong>visualiser</strong> pour
+      <strong>voir la visualisation.</strong>
+    </p>
+    <form action="/calculate  " method="post">   
+    <div class="container">
+      <span class="title">Fonction objectif:</span>
+      <p class="equation js-fonction-objectif">
+        <select>
+          <option>max</option>
+          <option>min</optionn>
+        </select>
+        <span>z = </span>
+        <input class="js-fo-inputx" name="z1"/>
+        <span>x + </span>
+        <input class="js-fo-inputy" name ="z2"/>
+        <span>y</span>
+      </p>
+    </div>
+    <div class="container">
+      <span class="title">Sous-contraintes:</span>
+      <p class="equation js-sous-contrainte">
+        <input name="a1"/>
+        <span>x + </span>
+        <input name="b1"/>
+        <span>y</span>
+        <select>
+          <option value="1">>=</option>
+          <option value="2">&lt;=</option>
+          <option value="3">=</optionn>
+        </select>
+        <input name="c1"/>
+      </p>
+      <p class="equation js-sous-contrainte">
+        <input name ="a2"/>
+        <span>x + </span>
+        <input name="b2"/>
+        <span>y</span>
+        <select>
+          <option value="1">>=</option>
+          <option value="2">&lt;=</option>
+          <option value="3">=</optionn>
+        </select>
+        <input name="c2"/>
+      </p>
+    </div>
+    <button class="bubbly-button" type="submit">Visualiser</button>
+    </form>
+  </div>
+</div>
+<script src="../static/js/script.js"></script>
+</body>
+</html>
